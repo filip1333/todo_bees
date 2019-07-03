@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from ToDoBeesBzzz.models import ToDoList
+from common.models import ToDoList
 
 
 class ToDoSerializer(serializers.ModelSerializer):

@@ -1,9 +1,11 @@
 from rest_framework.generics import ListCreateAPIView
 
-from ToDoBeesBzzz.serializers import ToDoSerializer
+from common.models import ToDoList
+from common.serializers import ToDoSerializer
 
 
 class ToDoListView(ListCreateAPIView):
+    queryset = ToDoList.objects.all()
     serializer_class = ToDoSerializer
 
     def post(self, request, *args, **kwargs):
