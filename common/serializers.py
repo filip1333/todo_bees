@@ -3,11 +3,16 @@ from rest_framework import serializers
 from common.models import ToDoList
 
 
-class ToDoSerializer(serializers.ModelSerializer):
-
+class ToDoListSerializer(serializers.ModelSerializer):
     class Meta:
         model = ToDoList
-        fields = ('id', 'completed', 'task', 'due_date')
+        fields = ('task', 'due_date', 'completed')
 
     def create(self, validated_data):
         return ToDoList.objects.create(**validated_data)
+
+
+class ToDoEditSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ToDoList
+        fields = ('id', 'task', 'completed', 'due_date')
