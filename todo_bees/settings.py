@@ -40,12 +40,14 @@ INSTALLED_APPS = [
     'common.apps.commonConfig',
     'rest_framework',
     'rest_framework_jwt',
-    'coreapi'
+    'coreapi',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -117,6 +119,8 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+CORS_ORIGIN = True
 
 
 # Static files (CSS, JavaScript, Images)
