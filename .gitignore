@@ -358,11 +358,11 @@ db.sqlite3
 Pipfile
 pip3
 curl
-TODO/__pycache__/
-TODO/__init__.py
-todolist/__pycache__/
-todolist/migrations/___pycache__/
-todolist/__init__.py
-todolist/migrations/__init__.py
-todolist/migrations/0001_initial.py
+todo_bees/__pycache__/
+todo_bees/__init__.py
+common/__pycache__/
+common/migrations/___pycache__/
+common/__init__.py
+common/migrations/__init__.py
+common/migrations/0001_initial.py
 
