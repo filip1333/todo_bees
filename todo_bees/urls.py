@@ -13,6 +13,6 @@ urlpatterns = [
     url(r'^todoes_create/', ToDoListCreate.as_view()),
     url(r'^todoes_read/', ToDoListRead.as_view()),
     url(r'^todoes_update/', ToDoListUpdate.as_view()),
-    url(r'^todoes_destroy/(?P<pk>\d+)/delete$', ToDoListDestroy.as_view()),
+    url(r'^todoes_destroy/(?P<pk>\d+)/', ToDoListDestroy.as_view()),
     url(r'^docs/', include_docs_urls(title='My API title')),
 ]
