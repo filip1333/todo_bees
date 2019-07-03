@@ -5,7 +5,7 @@ import sys
 
 
 def main():
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ToDoBees.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'todo_bees.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
