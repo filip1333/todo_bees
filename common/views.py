@@ -31,7 +31,7 @@ class ToDoListDestroy(DestroyAPIView):
         return self.destroy(request, *args, **kwargs)
 
 
-class ToDoListUpdate(UpdateAPIView):
+class ToDoUpdate(UpdateAPIView):
     queryset = ToDoList.objects.all()
     serializer_class = ToDoEditSerializer
 

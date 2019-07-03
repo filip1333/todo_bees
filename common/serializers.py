@@ -16,3 +16,12 @@ class ToDoEditSerializer(serializers.ModelSerializer):
     class Meta:
         model = ToDoList
         fields = ('id', 'task', 'completed', 'due_date')
+
+
+class ToDoUpdateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ToDoList
+        fields = ('id', 'task', 'completed', 'due_date')
+
+    def update(self, instance, validated_data):
+        return ToDoList.objects.update(**validated_data)
